@@ -2,7 +2,7 @@ import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, U
 import { Group } from './group.entity';
 
 
-@Entity('students')   
+@Entity('student')   
 export class Student extends BaseEntity{
 
     @PrimaryGeneratedColumn('increment')
@@ -11,7 +11,7 @@ export class Student extends BaseEntity{
     @Column({type: 'varchar', nullable:true})
     name: string;
 
-    @Column({type: 'number', nullable:true})
+    @Column({type: 'int', nullable:true})
     age: number;
 
     @Column({type: 'varchar', nullable:true})
