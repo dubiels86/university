@@ -6,7 +6,7 @@ import {
   NotFoundException,
 } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { getManager } from "typeorm";
+import { getConnection, getManager } from "typeorm";
 import { Group } from "../entities/group.entity";
 import { GroupDto } from "./dto/group.dto";
 import { GroupRepository } from "./group.repository";
@@ -37,12 +37,14 @@ export class GroupService {
     return plainToClass(GroupDto, group);
   }
 
-  async getAll(): Promise<GroupDto[]> {
-    const groups: Group[] = await this._groupRepository.find({
-      where: { status: status.ACTIVE },
-    });
-
-    return groups.map((g: Group) => plainToClass(GroupDto, g));
+  async getAll(): Promise<any[]> {
+    return await getConnection()
+    .createQueryBuilder()
+    .select('group')
+    .from(Group, 'group')
+    .innerJoinAndSelect('group.students', 's')
+    .orderBy('group.name')         
+    .getMany()
   }
 
   async create(g: Group) {
