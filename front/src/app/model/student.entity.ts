@@ -6,8 +6,5 @@ export class Student {
     email?: string;
     bithday?: string;
     place_birth?: string;
-    group?: any;
-    
-    
-    
+    group?: any; 
 }
