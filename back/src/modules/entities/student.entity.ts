@@ -2,7 +2,7 @@ import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, U
 import { Group } from './group.entity';
 
 
-@Entity('student')   
+@Entity('students')   
 export class Student extends BaseEntity{
 
     @PrimaryGeneratedColumn('increment')

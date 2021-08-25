@@ -19,7 +19,7 @@ export class StudentDto {
     @Expose()
     @IsNumber()
     @MaxLength(3, {message: 'This age is not valid'})
-    readonly age: string;
+    readonly age: number;
 
     @Expose()
     @IsString()
