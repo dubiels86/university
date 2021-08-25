@@ -1,12 +1,12 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { AdminBaseComponent } from "./layouts/admin-base/admin-base.component";
-import { CarComponent } from "./views/admin-base/car/car.component";
+import { CarComponent } from "./views/admin-university/car/car.component";
 
 // layouts
 
-import { DashboardBaseComponent } from "./views/admin-base/dashboard/dashboard-base.component";
-import { FuelComponent } from "./views/admin-base/fuel/fuel.component";
+import { DashboardBaseComponent } from "./views/admin-university/dashboard/dashboard-base.component";
+import { FuelComponent } from "./views/admin-university/fuel/fuel.component";
 
 const routes: Routes = [
   

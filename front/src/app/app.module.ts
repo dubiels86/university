@@ -23,19 +23,19 @@ import { NotificationDropdownComponent } from "./components/dropdowns/notificati
 import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
-import { DashboardBaseComponent } from "./views/admin-base/dashboard/dashboard-base.component";
+import { DashboardBaseComponent } from "./views/admin-university/dashboard/dashboard-base.component";
 import { SidebarBaseComponent } from "./components/sidebar-base/sidebar-base.component";
 import { AdminBaseComponent } from "./layouts/admin-base/admin-base.component";
-import { FuelComponent } from "./views/admin-base/fuel/fuel.component";
+import { FuelComponent } from "./views/admin-university/fuel/fuel.component";
 import { NgSelectModule } from "@ng-select/ng-select";
-import { CardAddCarComponent } from "./components/cards/Base/card-addcar/card-addcar.component";
+import { CardAddGroupComponent } from "./views/card-addgroup/card-addgroup.component";
 import { HeaderStatsBaseComponent } from "./components/headers/header-stats-base/header-stats-base.component";
 import { TableDropdownCarComponent } from "./components/dropdowns/table-dropdown-car/table-dropdown-car.component";
-import { CarComponent } from "./views/admin-base/car/car.component";
-import { EstadoComponent } from "./views/admin-base/estado/estado.component";
+import { CarComponent } from "./views/admin-university/car/car.component";
+import { EstadoComponent } from "./views/admin-university/estado/estado.component";
 import { ToastrModule } from "ngx-toastr";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { VehiculoComponent } from "./views/admin-base/vehiculo/vehiculo.component";
+import { VehiculoComponent } from "./views/admin-university/vehiculo/vehiculo.component";
 import { ModalModule } from "ngb-modal";
 import { NgbAlertModule, NgbModalModule, NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { NgxPageScrollCoreModule } from "ngx-page-scroll-core";
@@ -71,7 +71,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     TableDropdownComponent,
     EstadoComponent,
     CarComponent,
-    CardAddCarComponent,
+    CardAddGroupComponent,
     DashboardBaseComponent,
     SidebarBaseComponent,
     VehiculoComponent,

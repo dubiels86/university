@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { FuelService } from "src/app/services/fuel.service";
+
 
 @Component({
   selector: "app-header-stats-base",
@@ -11,7 +11,7 @@ export class HeaderStatsBaseComponent implements OnInit {
   fuelTotal = 0;
   aux: any[] = [];
 
-  constructor(private readonly _fuelService:FuelService) {
+  constructor() {
     
   }
 
