@@ -4,7 +4,7 @@ import { Student } from "src/modules/entities/student.entity";
 
 
 @Exclude()
-export class CarDto {
+export class GroupDto {
 
     @Expose()
     @IsNumber()
