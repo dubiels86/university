@@ -1,21 +1,21 @@
 import {
-    BadRequestException,
-    HttpException,
-    HttpStatus,
-    Injectable,
-    NotFoundException,
-  } from "@nestjs/common";
-  import { InjectRepository } from "@nestjs/typeorm";
-  import { getManager } from "typeorm";
-  import { Group } from "../entities/group.entity";
-  import { GroupDto } from "./dto/group.dto";
-  import { GroupRepository } from "./group.repository";
-  import { status } from "../shared/entity-status.enum";
-  import { plainToClass } from "class-transformer";
+  BadRequestException,
+  HttpException,
+  HttpStatus,
+  Injectable,
+  NotFoundException,
+} from "@nestjs/common";
+import { InjectRepository } from "@nestjs/typeorm";
+import { getManager } from "typeorm";
+import { Group } from "../entities/group.entity";
+import { GroupDto } from "./dto/group.dto";
+import { GroupRepository } from "./group.repository";
+import { status } from "../shared/entity-status.enum";
+import { plainToClass } from "class-transformer";
 
 @Injectable()
 export class GroupService {
-    manager = getManager();
+  manager = getManager();
   constructor(
     @InjectRepository(GroupRepository)
     private readonly _groupRepository: GroupRepository
@@ -63,7 +63,7 @@ export class GroupService {
 
     foundGroup.name = g.name;
     foundGroup.teacher = g.teacher;
-    
+
     const savedGroup = await this._groupRepository.save(foundGroup);
 
     return plainToClass(GroupDto, savedGroup);
