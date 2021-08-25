@@ -1,0 +1,10 @@
+{
+    "/": {
+      "target": "http://localhost:3001/protal-it/reciclaje",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/": ""
+      }
+    }
+  }

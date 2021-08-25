@@ -1,0 +1,33 @@
+<a
+  class="text-blueGray-500 block py-1 px-3"
+  href="#pablo"
+  (click)="toggleDropdown($event)"
+  #btnDropdownRef
+>
+  <i class="fas fa-ellipsis-v"></i>
+</a>
+<div class="min-w-48 z-50" #popoverDropdownRef>
+  <div
+    class="bg-white text-base float-left py-2 list-none text-left rounded shadow-lg mt-1 min-w-48"
+    [ngClass]="dropdownPopoverShow ? 'block' : 'hidden'"
+  >
+  
+      <button
+
+        (click) = "createCar()"
+        class="bg-red-600 text-white active:bg-red-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
+        type="button"
+      >
+        Editar
+      </button>
+    <button
+
+    (click)="removeValueChanged(row)"
+      class="bg-red-600 text-white active:bg-red-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
+      type="button"
+    >
+      Eliminar
+    </button>
+    
+  </div>
+</div>
