@@ -6,7 +6,7 @@ import {
   NotFoundException,
 } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { getManager } from "typeorm";
+import { getConnection, getManager } from "typeorm";
 import { Student } from "../entities/student.entity";
 import { StudentDto } from "./dto/student.dto";
 import { StudentRepository } from "./student.repository";
@@ -37,12 +37,14 @@ export class StudentService {
     return plainToClass(StudentDto, student);
   }
 
-  async getAll(): Promise<StudentDto[]> {
-    const students: Student[] = await this._studentRepository.find({
-      where: { status: status.ACTIVE },
-    });
-
-    return students.map((st: Student) => plainToClass(StudentDto, st));
+  async getAll(): Promise<any[]> {
+    return await getConnection()
+          .createQueryBuilder()
+          .select('student')
+          .from(Student, 'student')
+          .innerJoinAndSelect('student.group', 'g')
+          .orderBy('student.name')         
+          .getMany()
   }
 
   async create(student: Student) {

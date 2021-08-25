@@ -2,6 +2,7 @@ import { IsString, MaxLength, IsNumber, IsDecimal, IsDate, IsEmail } from "class
 import { Exclude, Expose } from 'class-transformer';
 import { Student } from "src/modules/entities/student.entity";
 import { Group } from "src/modules/entities/group.entity";
+import { GroupDto } from "src/modules/group/dto/group.dto";
 
 
 @Exclude()
