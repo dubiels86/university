@@ -32,7 +32,7 @@ export class UniversityService {
     return this.httpClient.delete(`${this.endPoint}/groups/${id}`);
   }
 
-  updateGroup(id: string, g:Group) {
+  updateGroup(id: number, g:Group) {
     return this.httpClient.patch(`${this.endPoint}/groups/${id}`, g);
   }
 
@@ -52,7 +52,7 @@ export class UniversityService {
     return this.httpClient.delete(`${this.endPoint}/students/${id}`);
   }
 
-  updateStudent(id: string, st:Student) {
+  updateStudent(id: number, st:Student) {
     return this.httpClient.patch(`${this.endPoint}/students/${id}`, st);
   }
 
