@@ -1,22 +1,21 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { AdminBaseComponent } from "./layouts/admin-base/admin-base.component";
-import { CarComponent } from "./views/admin-university/car/car.component";
+import { AdminComponent } from "./layouts/admin/admin.component";
+import { DashboardComponent } from "./views/dashboard/dashboard.component";
+import { GroupComponent } from "./views/group/group.component";
 
-// layouts
 
-import { DashboardBaseComponent } from "./views/admin-university/dashboard/dashboard-base.component";
-import { FuelComponent } from "./views/admin-university/fuel/fuel.component";
 
 const routes: Routes = [
   
   {
-    path: "admin-base",
-    component: AdminBaseComponent,
+    path: "admin",
+    component: AdminComponent,
     
     children: [
-      { path: "dashboard-base", component: DashboardBaseComponent},
-      { path: "", redirectTo: "dashboard-base", pathMatch: "full" },
+      { path: "dashboard", component: DashboardComponent},
+      { path: "grupo", component: GroupComponent},
+      { path: "", redirectTo: "/admin/dashboard", pathMatch: "full" },
     ],
   },
   

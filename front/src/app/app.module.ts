@@ -6,42 +6,29 @@ import { AppComponent } from "./app.component";
 
 // components for views and layouts
 
-import { AdminNavbarComponent } from "./components/navbars/admin-navbar/admin-navbar.component";
-import { AuthNavbarComponent } from "./components/navbars/auth-navbar/auth-navbar.component";
-import { FooterAdminComponent } from "./components/footers/footer-admin/footer-admin.component";
-import { FooterMenuComponent } from "./components/footers/footermenu/footermenu.component";
-import { FooterComponent } from "./components/footers/footer/footer.component";
-import { FooterSmallComponent } from "./components/footers/footer-small/footer-small.component";
-import { IndexNavbarComponent } from "./components/navbars/index-navbar/index-navbar.component";
-import { MapExampleComponent } from "./components/maps/map-example/map-example.component";
-import { IndexDropdownComponent } from "./components/dropdowns/index-dropdown/index-dropdown.component";
-import { TiDropdownComponent } from "./components/dropdowns/ti-dropdown/ti-dropdown.component";
-import { TableDropdownComponent } from "./components/dropdowns/table-dropdown/table-dropdown.component";
-import { TableMenuDropdownComponent } from "./components/dropdowns/table-menu-dropdown/table-menu-dropdown.component";
-import { PagesDropdownComponent } from "./components/dropdowns/pages-dropdown/pages-dropdown.component";
-import { NotificationDropdownComponent } from "./components/dropdowns/notification-dropdown/notification-dropdown.component";
-import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
-import { DashboardBaseComponent } from "./views/admin-university/dashboard/dashboard-base.component";
-import { SidebarBaseComponent } from "./components/sidebar-base/sidebar-base.component";
-import { AdminBaseComponent } from "./layouts/admin-base/admin-base.component";
-import { FuelComponent } from "./views/admin-university/fuel/fuel.component";
 import { NgSelectModule } from "@ng-select/ng-select";
-import { CardAddGroupComponent } from "./views/card-addgroup/card-addgroup.component";
-import { HeaderStatsBaseComponent } from "./components/headers/header-stats-base/header-stats-base.component";
-import { TableDropdownCarComponent } from "./components/dropdowns/table-dropdown-car/table-dropdown-car.component";
-import { CarComponent } from "./views/admin-university/car/car.component";
-import { EstadoComponent } from "./views/admin-university/estado/estado.component";
 import { ToastrModule } from "ngx-toastr";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { VehiculoComponent } from "./views/admin-university/vehiculo/vehiculo.component";
 import { ModalModule } from "ngb-modal";
 import { NgbAlertModule, NgbModalModule, NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { NgxPageScrollCoreModule } from "ngx-page-scroll-core";
 import { PerfectScrollbarConfigInterface, PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG } from "ngx-perfect-scrollbar";
 import { OrderModule } from "ngx-order-pipe";
 import { CookieService } from "ngx-cookie-service";
+import { GroupComponent} from './views/group/group.component';
+import { DashboardComponent} from './views/dashboard/dashboard.component';
+import { CardLineChartComponent} from './components/card-line-chart/card-line-chart.component';
+import { AdminComponent} from './layouts/admin/admin.component';
+import { SidebarComponent} from './components/sidebar/sidebar.component';
+import { AdminNavbarComponent} from './components/admin-navbar/admin-navbar.component';
+import { HeaderStatsComponent} from './components/header-stats/header-stats.component';
+import { FooterAdminComponent} from './components/footer-admin/footer-admin.component';
+import { NotificationDropdownComponent} from './components/dropdowns/notification-dropdown/notification-dropdown.component';
+import { UserDropdownComponent} from './components/dropdowns/user-dropdown/user-dropdown.component';
+import { CardStatsComponent} from './components/card-stats/card-stats.component';
+import { CardAddGroupComponent} from './components/card-addgroup/card-addgroup.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -51,33 +38,18 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 @NgModule({
   declarations: [
     AppComponent,
-    IndexDropdownComponent,
-    TiDropdownComponent,
-    PagesDropdownComponent,
-    TableDropdownComponent,
-    TableDropdownCarComponent,
+    GroupComponent,
+    DashboardComponent,
+    CardLineChartComponent,
+    AdminComponent,
+    SidebarComponent,
+    AdminNavbarComponent,
+    HeaderStatsComponent,
+    FooterAdminComponent,
     NotificationDropdownComponent,
     UserDropdownComponent,
-    FooterComponent,
-    FooterSmallComponent,
-    FooterAdminComponent,
-    HeaderStatsBaseComponent,
-    MapExampleComponent,
-    AuthNavbarComponent,
-    AdminNavbarComponent,
-    IndexNavbarComponent,
-    FooterMenuComponent,
-    TableMenuDropdownComponent,
-    TableDropdownComponent,
-    EstadoComponent,
-    CarComponent,
-    CardAddGroupComponent,
-    DashboardBaseComponent,
-    SidebarBaseComponent,
-    VehiculoComponent,
-    FuelComponent,
-    AdminBaseComponent,
-    //-------End Base-------------------
+    CardStatsComponent,
+    CardAddGroupComponent
     
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule,
