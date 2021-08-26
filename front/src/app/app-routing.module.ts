@@ -15,6 +15,7 @@ const routes: Routes = [
     children: [
       { path: "dashboard", component: DashboardComponent},
       { path: "grupo", component: GroupComponent},
+      { path: "estudiante", component: GroupComponent},
       { path: "", redirectTo: "/admin/dashboard", pathMatch: "full" },
     ],
   },
